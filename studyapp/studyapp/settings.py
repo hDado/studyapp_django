@@ -38,11 +38,17 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "base.apps.BaseConfig",
+
     "rest_framework",
     "corsheaders",
 
     
 ]
+
+#AUTH_USER_MODEL = 'base.CustomUser'  # Replace 'myapp' with the actual app name where your CustomUser model is defined
+
+
+
 
 MIDDLEWARE = [
    
@@ -134,8 +140,11 @@ STATICFILES_DIRS = [
 ]
 
 
-#STATIC_ROOT=
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+#STATIC_ROOT= 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
